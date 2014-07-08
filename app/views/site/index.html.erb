@@ -1,0 +1,19 @@
+<h1>BBQ</h1>
+
+<a href="/new">Create New Event</a>
+
+<form action="/" method="get">
+  <input type="text" name="search" />
+  <input type="submit" />
+</form>
+
+<h2>Events</h2>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= event.name %>
+      <%= event.location %>
+    </li>
+  <% end %>
+</ul>
